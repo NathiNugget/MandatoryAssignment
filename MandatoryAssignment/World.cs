@@ -35,7 +35,15 @@ namespace MandatoryAssignment
                     Creatures[i].AlterItems(); 
                 }
             }
+
+            foreach (WorldObject obj in WorldObjects) {
+                if (obj.Removeable && obj.AttackChest is null && obj.DefenceChest is null) { 
+                    WorldObjects.Remove(obj);
+                }
+            }
         }
+
+
 
 
 

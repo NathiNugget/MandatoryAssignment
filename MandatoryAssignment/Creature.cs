@@ -80,6 +80,10 @@ namespace MandatoryAssignment
         public int HitRegular()
         {
             int dmg = AttackItems.Sum(item => item.Hit);
+            if (_world.RoundNumber == 11)
+            {
+                Console.WriteLine("something");
+            }
             LoggerHelper.GetInstance().TraceEvent(TraceEventType.Information, (int)IDs.HitEnemy, $"{Name} -> Dealing damage: {dmg}");
             return dmg * DifficultyMultiplier;
         }
@@ -118,7 +122,7 @@ namespace MandatoryAssignment
 
             for (int i = 0; i < AttackItems.Count; i++)
             {
-                AttackItems[i].WrapItem(new AttackItem($"Upgraded {AttackItems[i].Name}", 5, 2));
+                AttackItems[i] = AttackItems[i].WrapItem(new AttackItem($"Upgraded {AttackItems[i].Name}", 5, 2));
             }
 
             for (int i = 0; i < DefensiveItems.Count; i++)
