@@ -16,14 +16,8 @@ namespace MandatoryAssignment.Interfaces
         /// Range of the given weapon
         /// </summary>
         int Range { get; init; }
-        /// <summary>
-        /// Method to wrap the item <para/>for example when 10 rounds has passed, items can be passively upgraded for intensity purposes. 
-        /// 
-        /// 
-        /// </summary>
-        /// <param name="ai"></param>
-        /// <returns></returns>
-        IAttackItem WrapItem(IAttackItem ai);
+        
+        
 
         
     }

@@ -6,6 +6,5 @@
         
         int ReduceHitPoint { get; set; }
         
-        IDefenceItem WrapItem(IDefenceItem di);
     }
 }

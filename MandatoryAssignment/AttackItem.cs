@@ -14,14 +14,17 @@ namespace MandatoryAssignment
             Range = range;
         }
 
+        
+        
+
         /// <summary>
         /// This item gets wrapped inside the passed item using Decorator pattern
         /// </summary>
         /// <param name="di">Item to wrap this instance</param>
         /// <returns>new the passed item with this instance</returns>
-        public IAttackItem WrapItem(IAttackItem ai)
+        public IItem WrapItem(IItem item)
         {
-
+            AttackItem ai = (AttackItem)item;
             ai.InnerItem = this;
             return ai;
         }

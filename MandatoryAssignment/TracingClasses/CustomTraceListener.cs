@@ -6,7 +6,7 @@ public class CustomTraceListener : System.Diagnostics.TraceListener
     public CustomTraceListener()
     {
         _path = "log.txt";
-        sw = File.AppendText(Directory.GetCurrentDirectory() + "\\anders.txt");
+        sw = File.AppendText(Directory.GetCurrentDirectory() + "\\log.txt");
         sw.AutoFlush = true;
     }
 

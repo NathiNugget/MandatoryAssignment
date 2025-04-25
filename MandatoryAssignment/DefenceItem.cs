@@ -13,17 +13,14 @@ namespace MandatoryAssignment
 
         }
 
-        /// <summary>
-        /// This item gets wrapped inside the passed item using Decorator pattern
-        /// </summary>
-        /// <param name="di">Item to wrap this instance</param>
-        /// <returns>new the passed item with this instance</returns>
-        public IDefenceItem WrapItem(IDefenceItem di)
+
+
+        public IItem WrapItem(IItem item)
         {
+            DefenceItem di = (DefenceItem)item;
             di.InnerItem = this;
             return di;
         }
-
 
         public string Name { get; init; }
         public int ReduceHitPoint

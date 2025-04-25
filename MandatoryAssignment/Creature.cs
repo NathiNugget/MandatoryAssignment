@@ -122,7 +122,7 @@ namespace MandatoryAssignment
 
             for (int i = 0; i < AttackItems.Count; i++)
             {
-                AttackItems[i] = AttackItems[i].WrapItem(new AttackItem($"Upgraded {AttackItems[i].Name}", 5, 2));
+                AttackItems[i] = (AttackItem)AttackItems[i].WrapItem(new AttackItem($"Upgraded {AttackItems[i].Name}", 5, 2));
             }
 
             for (int i = 0; i < DefensiveItems.Count; i++)
